@@ -1,0 +1,590 @@
+/*Global*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(230, 192, 192);
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/*class-lar*/
+.dark-color {
+    background-color: rgb(32, 1, 1);
+}
+
+.light-color {
+    background-color: rgb(240, 84, 84);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/*Main*/
+h1 {
+    font-size: 3em;
+    font-family: 'Lora', serif;
+    display: inline-block;
+    margin-right: 100px;
+}
+
+#navbar {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.60rem;
+}
+
+.dark-color {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: rgb(32, 1, 1);
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.dark-color h1 {
+    font-weight: bolder;
+}
+
+.dark-color #navbar ul {
+    list-style: none;
+}
+
+.dark-color #navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.dark-color #navbar ul li a {
+    font-size: 20px;
+    margin: 5px;
+    padding: 0.60rem;
+    color: white;
+    display: block;
+}
+
+.dark-color #navbar ul li a:hover {
+    background-color: rgb(240, 84, 84);
+    border-radius: 10px;
+}
+
+.dark-color #navbar ul li ul {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: rgb(32, 1, 1);
+    display: none;
+}
+
+.dark-color #navbar ul li ul:hover {
+    border-radius: 5px;
+}
+
+.dark-color #navbar ul li ul li {
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0.1);
+}
+
+.dark-color #navbar ul li ul li ul {
+    left: 200px;
+    top: 0;
+}
+
+.dark-color #navbar ul li:focus-within>ul,
+.dark-color #navbar ul li:hover>ul {
+    display: initial;
+}
+
+#navbar ul {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+
+#menu {
+    display: none;
+}
+
+.dark-color label {
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+#home {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid rgb(241, 187, 187);
+    background-color: rgb(230, 192, 192);
+}
+
+#home:hover {
+    background-color: rgb(211, 165, 165);
+}
+
+#home img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 45%;
+}
+
+#home .name {
+    padding-left: 2rem;
+}
+
+#melumat .qutu pre {
+    border: 5px double black;
+}
+
+/*İnformasiya*/
+.container-infor {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#infor {
+    width: 100%;
+    min-height: 50vh;
+    padding: 8rem 3rem;
+    flex-direction: row;
+}
+
+#infor .infor-info {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#infor .infor-info .infor-info-heading {
+    font-size: 3rem;
+    letter-spacing: .5px;
+}
+
+#infor .infor-info .infor-info-txt {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    margin-top: 10px;
+    letter-spacing: .2px;
+    padding-right: 15px;
+}
+
+#infor .infor-info .infor-info-link {
+    padding: 2px;
+    color: white;
+    width: 50px;
+    background-color: black;
+}
+
+#infor .infor-info .infor-info-link:hover {
+    color: black;
+    border-radius: 6px;
+    background-color: rgb(157, 153, 153);
+}
+
+/*Xidmetler*/
+.container-xidmet {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#xidmetler {
+    flex-direction: column;
+    min-height: 50vh;
+    padding: 10rem 5rem;
+}
+
+#xidmetler .xidmetler-header {
+    width: 100%;
+    text-align: center;
+}
+
+#xidmetler .xidmetler-header .xidmetler-header-heading {
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: black;
+}
+
+#xidmetler .xidmetler-header .xidmetler-header-text {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin-top: 20px;
+}
+
+#xidmetler .xidmetler-info {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+#xidmetler .xidmetler-info .xidmet {
+    width: 100%;
+    min-height: 300px;
+    position: relative;
+    transition: .7s ease transform;
+    margin: 5px;
+}
+
+.xidmet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+}
+
+#xidmetler .xidmetler-info .xidmet .xidmet-card {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: .7s ease transform;
+    display: block;
+}
+
+#xidmetler .xidmetler-info .xidmet .xidmet-card .xidmet-front,
+#xidmetler .xidmetler-info .xidmet .xidmet-card .xidmet-back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.368);
+    padding: 10px;
+}
+
+#xidmetler .xidmetler-info .xidmet .xidmet-card .xidmet-back {
+    transform: rotateY(180deg);
+}
+
+#xidmetler .xidmetler-info .xidmet .xidmet-card i {
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+#xidmetler .xidmetler-info .xidmet .xidmet-card .xidmet-front-heading {
+    font-size: 2.3rem;
+    text-transform: capitalize;
+}
+
+#xidmetler .xidmetler-info .xidmet:hover .xidmet-card {
+    transform: rotateY(180deg);
+}
+
+.xidmetler .xidmetler-info .xidmet .xidmet-card .xidmet-back-text {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.xidmetler .xidmetler-info .xidmet:nth-child(1) .xidmet-card .xidmet-front {
+    background-image: url(image/front-end.jpg);
+    background-size: cover;
+    position: relative;
+    color: white;
+}
+
+.xidmetler .xidmetler-info .xidmet:nth-child(1) .xidmet-card .xidmet-front::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.274);
+    z-index: -1;
+}
+
+.xidmetler .xidmetler-info .xidmet:nth-child(2) .xidmet-card .xidmet-front {
+    background-image: url(image/back-end.jpg);
+    background-size: cover;
+    position: relative;
+    color: white;
+}
+
+.xidmetler .xidmetler-info .xidmet:nth-child(2) .xidmet-card .xidmet-front::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.274);
+    z-index: -1;
+}
+
+.xidmetler .xidmetler-info .xidmet:nth-child(3) .xidmet-card .xidmet-front {
+    background-image: url(image/full-stackk.jpg);
+    background-size: cover;
+    position: relative;
+    color: white;
+}
+
+.xidmetler .xidmetler-info .xidmet:nth-child(3) .xidmet-card .xidmet-front::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.274);
+    z-index: -1;
+}
+
+.xidmetler .xidmetler-info .xidmet:nth-child(4) .xidmet-card .xidmet-front {
+    background-image: url(image/info-security.jpg);
+    background-size: cover;
+    position: relative;
+    color: white;
+}
+
+.xidmetler .xidmetler-info .xidmet:nth-child(4) .xidmet-card .xidmet-front::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.274);
+    z-index: -1;
+}
+
+/*end-Main*/
+
+/*Information - html */
+
+.title {
+    margin-bottom: 2em;
+}
+
+.title h2 {
+    font-weight: 400;
+    font-size: 2em;
+    color: #16a085;
+}
+
+.img-b {
+    width: 100%;
+}
+
+.container-information {
+    width: 96%;
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+#header-wrapper {
+    padding: 2em 0em 2em 0em;
+    background: #333333;
+    overflow: hidden;
+    background: url(image/info_background.jpg) no-repeat center;
+    background-size: cover;
+}
+
+#header {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+#photo {
+    width: 500px;
+    height: 70px;
+    margin: 0 auto;
+    padding: 2em 0em;
+}
+
+#photo h1 {
+    letter-spacing: 0.10em;
+    font-size: 3em;
+}
+
+#photo p {
+    letter-spacing: 0.10em;
+    color: #fff;
+}
+
+#banner {
+    height: 10px;
+    background-color: #333;
+}
+
+/*Footer*/
+
+#contact {
+    background-color: rgb(32, 1, 1);
+    color: white;
+    padding: 1rem;
+}
+
+#contact .contact-form {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact .contact-form ul {
+    list-style-type: none;
+    display: flex;
+    margin-top: 1rem;
+    align-self: center;
+}
+
+#contact .contact-form ul li a {
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+#contact .contact-form ul li a:hover {
+    opacity: 0.8;
+    color: rgb(240, 84, 84)
+}
+
+.form-group {
+    padding: 0.25rem 0;
+}
+
+.form-group label {
+    display: block;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.4rem;
+    font-size: 1rem;
+    resize: none;
+    border-radius: 5px;
+}
+
+.heading-medium {
+    font-size: 1.5rem;
+}
+
+.btn {
+    margin-top: 1.25rem;
+    padding: 0.8rem 3rem;
+    border-radius: 5px;
+    letter-spacing: 0.5px;
+}
+
+.btn-block {
+    width: 100%;
+    text-align: center;
+}
+
+.btn:hover {
+    background: rgb(240, 84, 84);
+}
+
+.gonder-b {
+    color: black;
+}
+
+.gonder-b:hover {
+    color: white;
+}
+
+/*Front-end courses*/
+
+.container-services {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Courses */
+#courses {
+    color: rgb(18, 17, 17);
+    padding: 1rem;
+}
+
+.courses {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.courses .course {
+    display: flex;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.courses .course .course-img {
+    margin-right: 0.5rem;
+    position: relative;
+}
+
+.courses .course .course-img img {
+    border-radius: 5px;
+}
+
+.courses .course .course-img span {
+    background: red;
+    padding: 0.25rem;
+    color: white;
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.courses .course .course-info .title {
+    letter-spacing: 1.2px;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.courses .course .course-info .description {
+    letter-spacing: 1.2px;
+    margin-bottom: 0.25rem;
+    opacity: 0.6;
+}
+
+.courses .course .course-info .instructor {
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
+    opacity: 0.6;
+}
+
+.courses .course .course-info .rating {
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
+    opacity: 0.6;
+}

@@ -1,0 +1,52 @@
+#navbar {
+    flex-direction: column;
+    overflow: hidden;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#navbar ul li a {
+    padding-right: 50px;
+}
+
+.dark-color #navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgb(32, 1, 1);
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+.dark-color #navbar ul li {
+    width: 100%;
+}
+
+.dark-color #navbar ul li ul {
+    position: relative;
+    width: 100%;
+}
+
+.dark-color #navbar ul li ul li ul {
+    width: 100%;
+    left: 0;
+}
+
+#home {
+    margin-top: 145px;
+}
+
+#infor {
+    width: 100%;
+    min-height: 25vh;
+    padding: 6rem 1.5rem;
+    flex-direction: row;
+}
+
+#infor .infor-info {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
